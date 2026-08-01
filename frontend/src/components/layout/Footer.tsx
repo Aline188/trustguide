@@ -65,7 +65,7 @@ export function Footer() {
               href="mailto:hello@trustguide.com"
               className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-medium bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
             >
-              <Mail className="w-4 h-4" /> hello@trustguide.com
+              <Mail className="w-4 h-4" /> alineniyomwungeri188@gmail.com
             </a>
           </div>
 
