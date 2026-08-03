@@ -23,13 +23,13 @@ export const metadata: Metadata = {
     title: 'TrustGuide — Verified Answers You Can Trust',
     description: 'Find trustworthy, fact-based answers to common online questions.',
     url: '/',
-    images: [{ url: '/images/og.jpg', width: 1200, height: 630 }],
+    images: [{ url: '/images/og.png', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'TrustGuide — Verified Answers You Can Trust',
     description: 'Find trustworthy, fact-based answers to common online questions.',
-    images: ['/images/og.jpg'],
+    images: ['/images/og.png'],
     creator: '@trustguide',
   },
   robots: {
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
     googleBot: { index: true, follow: true, 'max-video-preview': -1, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
+    icon: '/favicon.svg',
+    shortcut: '/favicon.svg',
     apple: '/apple-touch-icon.png',
   },
   manifest: '/manifest.json',

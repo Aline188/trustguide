@@ -3,7 +3,7 @@ export default function CookiesPage() {
     <div className="min-h-screen py-16">
       <div className="container mx-auto px-4 max-w-3xl">
         <h1 className="text-3xl md:text-4xl font-bold mb-6">Cookie Policy</h1>
-        <p className="text-muted-foreground mb-8">Last updated: {new Date().toLocaleDateString()}</p>
+        <p className="text-muted-foreground mb-8">Last updated: August 3, 2026</p>
         <div className="prose-custom space-y-6">
           <section>
             <h2>1. What Are Cookies</h2>

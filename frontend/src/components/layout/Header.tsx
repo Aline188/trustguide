@@ -3,7 +3,8 @@
 import Link from 'next/link';
 import { useState } from 'react';
 import { useTheme } from 'next-themes';
-import { IoSearch as Search, IoMenu as Menu, IoClose as X, IoMoon as Moon, IoSunny as Sun, IoShieldCheckmark as Shield, IoChevronDown as ChevronDown, IoPerson as User, IoBookmark as Bookmark, IoLogOut as LogOut, IoSettings as Settings, IoNotifications as Bell } from 'react-icons/io5';
+import { IoSearch as Search, IoMenu as Menu, IoClose as X, IoMoon as Moon, IoSunny as Sun, IoChevronDown as ChevronDown, IoPerson as User, IoBookmark as Bookmark, IoLogOut as LogOut, IoSettings as Settings, IoNotifications as Bell } from 'react-icons/io5';
+import { ShieldCheck } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { categories } from '@/lib/constants';
 
@@ -20,7 +21,7 @@ export function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <div className="relative flex items-center justify-center w-9 h-9 rounded-xl bg-gradient-to-br from-primary to-primary-700 text-white font-bold text-sm transition-transform group-hover:scale-105">
-              <Shield className="w-5 h-5" />
+              <ShieldCheck className="w-5 h-5" />
             </div>
             <span className="font-bold text-xl tracking-tight">
               Trust<span className="text-primary">Guide</span>

@@ -26,13 +26,20 @@ class ApiClient {
       headers['Authorization'] = `Bearer ${token}`;
     }
 
-    const response = await fetch(`${this.baseUrl}${endpoint}`, {
-      ...options,
-      headers,
-    });
+    let response: Response;
+    try {
+      response = await fetch(`${this.baseUrl}${endpoint}`, {
+        ...options,
+        headers,
+      });
+    } catch {
+      throw new Error(
+        `Could not reach the server at ${this.baseUrl}. Check your connection and that the API is running (NEXT_PUBLIC_API_URL).`
+      );
+    }
 
     if (!response.ok) {
-      const error = await response.json().catch(() => ({ error: 'Request failed' }));
+      const error = await response.json().catch(() => ({ error: `Request failed (${response.status})` }));
       throw new Error(error.error || `HTTP ${response.status}`);
     }
 

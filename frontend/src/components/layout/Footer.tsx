@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { IoShieldCheckmark as Shield, IoHeart as Heart, IoMail as Mail } from 'react-icons/io5';
+import { IoHeart as Heart, IoMail as Mail } from 'react-icons/io5';
+import { ShieldCheck } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -54,7 +55,7 @@ export function Footer() {
           <div className="col-span-2 md:col-span-1 lg:col-span-1">
             <Link href="/" className="flex items-center gap-2 mb-4">
               <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-primary text-white">
-                <Shield className="w-4 h-4" />
+                <ShieldCheck className="w-4 h-4" />
               </div>
               <span className="font-bold text-lg">TrustGuide</span>
             </Link>
@@ -90,6 +91,9 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
             © {currentYear} TrustGuide. All rights reserved. Built with <Heart className="w-3.5 h-3.5 inline text-red-500" /> for a safer internet.
+          </p>
+          <p className="text-sm text-muted-foreground">
+            Developed by Aline
           </p>
           <div className="flex items-center gap-4 text-sm text-muted-foreground">
             <Link href="/privacy" className="hover:text-foreground">Privacy</Link>

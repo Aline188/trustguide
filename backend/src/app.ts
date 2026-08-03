@@ -29,7 +29,12 @@ const app = express();
 app.use(helmet({ contentSecurityPolicy: false, crossOriginEmbedderPolicy: false }));
 
 app.use(cors({
-  origin: [config.frontendUrl, 'http://localhost:3000'],
+  origin: (origin, callback) => {
+    if (!origin || origin === 'null') return callback(null, true);
+    const allowed = [config.frontendUrl, 'http://localhost:3000', 'http://localhost:3001'];
+    if (allowed.includes(origin)) return callback(null, true);
+    return callback(null, true);
+  },
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization'],
